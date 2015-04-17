@@ -4,13 +4,13 @@ from Negex import negex
 
 class SimpleTag_MedicalQueryParser(SimpleTag.SimpleTag):
 	"""		
-	Signature_Init:		the location of the Lucene index for the medical query terms, the location of the negex rule file.
+	Init: medicalQueryParserIndexLocation, negexRuleFileLocation, includeAllResults=False, maxHits=10
 	"""
 	
-	def __init__(self, medicalQueryParserIndexLocation, negexRuleFileLocation):
+	def __init__(self, medicalQueryParserIndexLocation, negexRuleFileLocation, includeAllResults=False, maxHits=10):
 		# Instantiate an instance of medicalQueryParser
 		try:
-			self.mqpTagger = MedicalQueryParser(medicalQueryParserIndexLocation)
+			self.mqpTagger = MedicalQueryParser(medicalQueryParserIndexLocation, includeAllResults, maxHits)
 		except IOError:
 			# FEATURE ADD
 			print "Unable to open MedicalQueryParser index."
