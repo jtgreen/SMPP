@@ -4,7 +4,9 @@ from MedicalQueryParser import MedicalQueryParser
 
 lucene.initVM(vmargs=['-Djava.awt.headless=true'])
 
-mqp = MedicalQueryParser("./Data/UMLSIndex", True, 100)
+# Set to True if you want the cascade not to short circuit at earlier steps. This, in effect, makes the algo act like a BOWs;
+# Though you do still get the result scores by which to differentiate.
+mqp = MedicalQueryParser("./Data/UMLSIndex", False, 100)
 
 while True:
     print
