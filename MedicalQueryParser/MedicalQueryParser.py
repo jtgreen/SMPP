@@ -208,7 +208,7 @@ class MedicalQueryParser:
         sortedPhrase = self.sortWords(normPhrase)
         if results == [] or self._includeAllResults == True:
             query3 = TermQuery( Term("str_sorted", sortedPhrase))
-            hits3 = searcher.search(query2, 1).scoreDocs
+            hits3 = searcher.search(query3, self._maxHits).scoreDocs
             
             # May need length instead of just hits3        
             if hits3 > 0:
@@ -220,7 +220,7 @@ class MedicalQueryParser:
         if results == [] or self._includeAllResults == True:
             
             query4 = TermQuery( Term("str_stemmed", stemmedPhrase))
-            hits4 = searcher.search(query4, 1).scoreDocs
+            hits4 = searcher.search(query4, self._maxHits).scoreDocs
             
             # May need length instead of just hits3        
             if hits4 > 0:
@@ -232,7 +232,7 @@ class MedicalQueryParser:
         if results == [] or self._includeAllResults == True:
             
             query5 = TermQuery( Term("str_stemmedSorted", stemmedSortedPhrase))
-            hits5 = searcher.search(query5, 1).scoreDocs
+            hits5 = searcher.search(query5, self._maxHits).scoreDocs
             
             # May need length instead of just hits3        
             if hits5 > 0:
