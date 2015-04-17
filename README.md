@@ -2,7 +2,7 @@
 The Small Medical Phrase Parser - For named entity recognition (NER) in medical text.
 
 # Introduction
-The SMPP was originally created in Scala by an outstanding programmer, Sujit Pal (http://sujitpal.blogspot.com/). While using NER in an informatics experiment I found its performance for short sentences with a few concepts comparable OR BETTER than cTAKES, an industry standard medical NER program. I converted it to python and added a few features then wrapped it around the classic NegEx algorithm (https://code.google.com/p/negex/). I think you wil find its performance outstanding as well. 
+The SMPP was originally created in Scala by an outstanding programmer, Sujit Pal (http://sujitpal.blogspot.com/). While using NER in an informatics experiment I found its performance for short sentences with a few concepts comparable or better than cTAKES in this specific domain. I converted it to python and added a few features then wrapped it around the classic NegEx algorithm (https://code.google.com/p/negex/). I think you wil find its performance outstanding as well. 
 
 # A possible use case
 Short human-natural (noisy) queries against a larger indexed corpus; for example, a human-friendly query system against a body of information tagged with UIMA/cTAKES and served up with Solr. 
