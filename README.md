@@ -47,6 +47,10 @@ Edit SimpleTage_MedicalQueryParser.py to reflect the location of the NegEx rule 
 
 There are no unit tests, though there should be. There are simple wrappers around the core class MedicalQueryParser called medicalQueryParserTest.py that setup a small query line to play around with results. There is an analogous wrapper for SimpleTag in the root directory that returns the same results but with the SOFAs negation meta data included from the NegEx tie in. 
 
+# Necessary libaries not native to python
+- PyLucene 
+- NLTK
+
 # Known issues
 - Building the index on Ubuntu 
 
