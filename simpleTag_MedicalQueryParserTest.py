@@ -2,7 +2,7 @@ import lucene
 lucene.initVM(vmargs=['-Djava.awt.headless=true'])
 
 from SimpleTag_MedicalQueryParser import SimpleTag_MedicalQueryParser
-smqp = SimpleTag_MedicalQueryParser("/Users/JG/Dev/Sandbox/FuzzyUMLS/Data/umlsindex", "/Users/JG/Dev/Svn/MSX/Tag/Negex/negex_triggers.txt")
+smqp = SimpleTag_MedicalQueryParser("./Data/umlsindex", "./Negex/negex_triggers.txt")
 
 while True:
     print
